@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+<head>
+  <meta charset="UTF-8">
+  <title>Toddler List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-blue-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white transition duration-300 min-h-screen flex items-center justify-center px-4">
+  <div class="w-full max-w-xl bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl transition duration-300">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">📝 Toddler List</h1>
+      <button onclick="toggleTheme()" class="transition text-sm px-4 py-1 border dark:border-white border-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+        Toggle Theme
+      </button>
+    </div>
+
+    <div class="flex gap-2 mb-6">
+      <input id="taskInput" type="text" class="flex-1 border dark:border-gray-600 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-700 dark:text-white transition" placeholder="Enter your task..." />
+      <button onclick="addTask()" class="bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded-lg font-semibold shadow">Add</button>
+    </div>
+
+    <ul id="taskList" class="space-y-2"></ul>
+
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+      <a href="streaks.html" class="bg-yellow-100 dark:bg-yellow-700 text-yellow-900 dark:text-white px-4 py-3 rounded-lg text-center font-medium shadow hover:scale-105 transition">🔥 Streaks</a>
+      <a href="calendar.html" class="bg-green-100 dark:bg-green-700 text-green-900 dark:text-white px-4 py-3 rounded-lg text-center font-medium shadow hover:scale-105 transition">📅 Calendar</a>
+      <a href="graph.html" class="bg-purple-100 dark:bg-purple-700 text-purple-900 dark:text-white px-4 py-3 rounded-lg text-center font-medium shadow hover:scale-105 transition">📊 Progress</a>
+    </div>
+  </div>
+
+  
+  <script src="./js/main.js"></script>
+</body>
+</html>

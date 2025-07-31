@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar View</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' };</script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-6">
+  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">📅 Task Calendar</h1>
+      <button onclick="toggleTheme()" class="text-sm border px-3 py-1 rounded">Toggle Theme</button>
+    </div>
+    <div id="calendarGrid" class="grid grid-cols-7 gap-2 text-center"></div>
+    <div class="mt-6">
+      <a href="index.html" class="text-blue-500 underline">← Back to To-Do</a>
+    </div>
+  </div>
+  <script src="./js/calendar.js"></script>
+</body>
+</html>
